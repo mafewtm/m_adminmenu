@@ -7,3 +7,6 @@ indent_style = space
 charset = utf-8
 trim_trailing_whitespace = true
 indent_size = 2
+
+[*.lua]
+indent_size = 4

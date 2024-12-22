@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { debugData } from './utils/debugData';
+import { isEnvBrowser } from './utils/misc';
 import App from './App';
 import './main.css';
 
-import { isEnvBrowser } from './utils/misc';
+debugData([
+  {
+    action: 'setVisible',
+    data: true,
+  },
+]);
 
 if (isEnvBrowser()) {
   const root = document.getElementById('root');
