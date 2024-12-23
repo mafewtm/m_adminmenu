@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation, Switch, Route, Redirect } from 'wouter';
 import { useNuiEvent } from '@/hooks/useNuiEvent';
 import { fetchNui } from '@/utils/fetchNui';
+import Header from './components/header';
 import Navbar from './components/navbar';
 import Home from './pages/home/home';
 import Players from './pages/players/players';
@@ -35,6 +36,7 @@ export default function AdminMenu() {
 
   return (
     <div className='flex-col h-4/6 w-3/6 rounded-md border-2 border-solid border-zinc-700 drop-shadow-md' style={{ display: visible ? 'flex' : 'none' }}>
+      <Header />
       <div className='flex h-full w-full bg-zinc-800 gap-5 p-5'>
         <Navbar />
         <div className='flex h-full w-full'>
