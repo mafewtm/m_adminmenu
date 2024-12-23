@@ -1,4 +1,4 @@
-import AdminMenu from '@/components/adminmenu/AdminMenu';
+import AdminMenu from '@/layouts/adminmenu/adminmenu';
 
 export default function App() {
   return (

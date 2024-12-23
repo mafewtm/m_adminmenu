@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useLocation, Switch, Route } from 'wouter';
+import { useLocation, Switch, Route, Redirect } from 'wouter';
 import { useNuiEvent } from '@/hooks/useNuiEvent';
 import { fetchNui } from '@/utils/fetchNui';
-import Navbar from './components/NavBar';
-import Home from './pages/home/Home';
-import Players from './pages/players/Players';
-import Server from './pages/server/Server';
-import Vehicles from './pages/vehicles/Vehicles';
-import Development from './pages/development/Development';
+import Navbar from './components/navbar';
+import Home from './pages/home/home';
+import Players from './pages/players/players';
+import Server from './pages/server/server';
+import Vehicles from './pages/vehicles/vehicles';
+import Development from './pages/dev/dev';
 
 export default function AdminMenu() {
   const [visible, setVisible] = useState(false);
