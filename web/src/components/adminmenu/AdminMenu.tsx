@@ -44,6 +44,9 @@ export default function AdminMenu() {
             <Route path='/server'><Server /></Route>
             <Route path='/vehicles'><Vehicles /></Route>
             <Route path='/development'><Development /></Route>
+            <Route>
+              <Redirect to='/' />
+            </Route>
           </Switch>
         </div>
       </div>
