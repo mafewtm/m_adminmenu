@@ -36,10 +36,10 @@ export default function Navbar() {
     <div className='flex flex-col h-fit w-fit justify-between rounded-md px-3 drop-shadow-md'>
       <div className='flex flex-col items-center gap-3'>
         <NavButton icon='carbon:home' label='Home' path='/' />
-        <NavButton icon='carbon:user-multiple' label='Players' path='players' />
-        <NavButton icon='carbon:bare-metal-server' label='Server' path='server' />
-        <NavButton icon='carbon:car' label='Vehicles' path='vehicles' />
-        <NavButton icon='carbon:code' label='Development' path='development' />
+        <NavButton icon='carbon:user-multiple' label='Players' path='/players' />
+        <NavButton icon='carbon:bare-metal-server' label='Server' path='/server' />
+        <NavButton icon='carbon:car' label='Vehicles' path='/vehicles' />
+        <NavButton icon='carbon:code' label='Development' path='/development' />
       </div>
     </div>
   );
