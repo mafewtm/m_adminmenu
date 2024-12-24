@@ -3,7 +3,8 @@ import { ColumnDef } from '@tanstack/react-table'
 import { debugData } from '@/utils/debugData';
 import { useNuiEvent } from '@/hooks/useNuiEvent';
 import { fetchNui } from '@/utils/fetchNui';
-import DataTable from '@/components/datatable'
+import DataTable from '@/components/datatable';
+import { useLocation } from 'wouter';
 
 type Player = {
   serverId: number
@@ -155,6 +156,11 @@ debugData<Player[]>([
 
 export default function Players() {
   const [players, setPlayers] = useState<Player[]>([]);
+  const navigate = useLocation()[1];
+
+  const handleDoubleClick = (row: any) => {
+    navigate(`/players/${row.original.citizenId}`);
+  };
 
   useNuiEvent<Player[]>('getPlayers', (playerData) => {
     setPlayers(playerData);
@@ -172,7 +178,7 @@ export default function Players() {
 
   return (
     <div className='flex flex-col w-full justify-start gap-5'>
-      <DataTable columns={columns} data={players}/>
+      <DataTable columns={columns} data={players} onDoubleClick={handleDoubleClick}/>
     </div>
   );
 }

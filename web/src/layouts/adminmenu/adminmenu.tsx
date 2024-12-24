@@ -6,6 +6,7 @@ import Header from './components/header';
 import Navbar from './components/navbar';
 import Home from './pages/home/home';
 import Players from './pages/players/players';
+import Profile from './pages/players/components/profile';
 import Server from './pages/server/server';
 import Vehicles from './pages/vehicles/vehicles';
 import Development from './pages/dev/dev';
@@ -43,6 +44,7 @@ export default function AdminMenu() {
           <Switch>
             <Route path='/'><Home /></Route>
             <Route path='/players'><Players /></Route>
+            <Route path='/players/:citizenId'><Profile /></Route>
             <Route path='/server'><Server /></Route>
             <Route path='/vehicles'><Vehicles /></Route>
             <Route path='/development'><Development /></Route>
