@@ -15,7 +15,7 @@ const NavButton = ({ icon, label, path }: NavButtonProps) => {
 
   return (
     <TooltipProvider>
-      <Tooltip delayDuration={200}>
+      <Tooltip delayDuration={400}>
         <TooltipTrigger asChild>
           <Link href={path}>
             <Button variant='ghost' size='icon' className={clsx("hover:bg-zinc-700", isActive && "bg-zinc-700")}>
@@ -33,7 +33,7 @@ const NavButton = ({ icon, label, path }: NavButtonProps) => {
 
 export default function Navbar() {
   return (
-    <div className='flex flex-col h-fit w-fit justify-between rounded-md p-3 drop-shadow-md'>
+    <div className='flex flex-col h-fit w-fit justify-between rounded-md px-3 drop-shadow-md'>
       <div className='flex flex-col items-center gap-3'>
         <NavButton icon='carbon:home' label='Home' path='/' />
         <NavButton icon='carbon:user-multiple' label='Players' path='players' />

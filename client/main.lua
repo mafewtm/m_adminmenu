@@ -12,7 +12,7 @@ end
 local function openAdminMenu()
     if isMenuOpen then return end
 
-    local allowed = lib.callback.await('m_admin:server:checkPermissions', false)
+    local allowed = lib.callback.await('m_adminmenuserver:checkPermissions', false)
 
     if not allowed or IsNuiFocused() or IsPauseMenuActive() then return end
 
@@ -31,10 +31,16 @@ local function closeAdminMenu()
     SendReactMessage('setVisible', false)
 end
 
-RegisterNetEvent('m_admin:client:openMenu', openAdminMenu)
+RegisterNetEvent('m_adminmenuclient:openMenu', openAdminMenu)
 
-RegisterNUICallback('closeMenu', function(_, cb)
+RegisterNuiCallback('closeMenu', function(_, cb)
     cb(1)
 
     closeAdminMenu()
+end)
+
+RegisterNuiCallback('getPlayers', function(_, cb)
+    local players = lib.callback.await('m_adminmenuserver:getPlayers', false)
+
+    cb(players)
 end)
