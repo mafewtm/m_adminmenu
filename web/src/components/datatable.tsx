@@ -57,7 +57,7 @@ export default function DataTable<TData, TValue>({
   })
 
   return (
-    <div>
+    <div className='pr-3'>
       <div className="flex flex-row h-fit items-center mb-5 rounded-md border border-zinc-700 shadow">
         <Input
           placeholder="Search"
