@@ -58,7 +58,7 @@ export default function DataTable<TData, TValue>({
 
   return (
     <div className='pr-3'>
-      <div className="flex flex-row h-fit items-center mb-5 rounded-md border border-zinc-700 shadow-md">
+      <div className="flex flex-row h-fit items-center mb-5 rounded-md border border-zinc-700 shadow">
         <Input
           placeholder="Search"
           onChange={e => table.setGlobalFilter(String(e.target.value))}

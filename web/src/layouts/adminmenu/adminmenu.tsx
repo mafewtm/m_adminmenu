@@ -36,7 +36,7 @@ export default function AdminMenu() {
   }, [visible]);
 
   return (
-    <div className='flex-col h-4/6 w-3/6 bg-zinc-900 rounded-md border-2 border-solid border-bondi-700 text-zinc-300 drop-shadow-md' style={{ display: visible ? 'flex' : 'none' }}>
+    <div className='flex-col h-4/6 w-3/6 bg-bismark-950 rounded-md border-2 border-solid border-bismark-900 text-zinc-300 shadow' style={{ display: visible ? 'flex' : 'none' }}>
       <Header />
       <div className='flex h-full w-full gap-5 p-5 overflow-x-hidden'>
         <Navbar />
